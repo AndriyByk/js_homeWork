@@ -8,11 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-
 <script>
-    let a = "hello";
-    let b = "owu";
-    let c = "com";
+    // - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
+    //     Вивести кожну змінну за допомогою: console.log , alert, document.write
+    let a1 = "hello";
+    let b1 = "owu";
+    let c1 = "com";
     let d = "ua";
     let e = 1;
     let f = 10;
@@ -23,15 +24,15 @@
     let k = 16;
     let l = true;
     let m = false;
-    document.write(a)
-    console.log(a)
-    alert(a)
-    document.write(b)
-    console.log(b)
-    alert(b)
-    document.write(c)
-    console.log(c)
-    alert(c)
+    document.write(a1)
+    console.log(a1)
+    alert(a1)
+    document.write(b1)
+    console.log(b1)
+    alert(b1)
+    document.write(c1)
+    console.log(c1)
+    alert(c1)
     document.write(d)
     console.log(d)
     alert(d)
@@ -63,9 +64,10 @@
     console.log(m)
     alert(m)
 
-    a = b;
-    b = c;
-    c = d;
+    // - Переприсвоїти кожній змінній з завдання значення на довільне.
+    a1 = b1;
+    b1 = c1;
+    c1 = d;
     d = e;
     e = f;
     f = g;
@@ -76,63 +78,42 @@
     k = l;
     l = m;
     m = 0;
-    document.write(a)
-    console.log(a)
-    alert(a)
-    document.write(b)
-    console.log(b)
-    alert(b)
-    document.write(c)
-    console.log(c)
-    alert(c)
-    document.write(d)
-    console.log(d)
-    alert(d)
-    document.write(e)
-    console.log(e)
-    alert(e)
-    document.write(f)
-    console.log(f)
-    alert(f)
-    document.write(g)
-    console.log(g)
-    alert(g)
-    document.write(h)
-    console.log(h)
-    alert(h)
-    document.write(i)
-    console.log(i)
-    alert(i)
-    document.write(j)
-    console.log(j)
-    alert(j)
-    document.write(k)
-    console.log(k)
-    alert(k)
-    document.write(l)
-    console.log(l)
-    alert(l)
-    document.write(m)
-    console.log(m)
-    alert(m)
 
+    // - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт)
     let firstName = "Андрій ";
     let middleName = "Тарасович ";
     let lastName = "Бик";
     let person = firstName + middleName + lastName;
 
+    // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+    //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
     firstName = prompt();
     middleName = prompt();
     age = prompt();
     document.write("Вітаю " + firstName + " " + middleName + ". Тобі " + age + " років");
 
-    let a = 100;
+    // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+    //     let a = 100; let b = '100'; let c = true;
+    let a2 = 100;
     let b = '100';
     let c = true;
-    console.log(typeof a);
+    console.log(typeof a2);
     console.log(typeof b);
     console.log(typeof c);
 
+    // - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+    //     В однакових виразах не використовувати однакові оператори!!!
+    //     5 ? 6 -> true
+    // 5 ? 6 -> false
+    // 5 ? 6 -> false
+    // 5 ? 6 -> false
+    // 10 ? 10 -> true
+    // 10 ? 10 -> true
+    // 10 ? 10 -> false
+    // 10 ? 10 -> false
+    // 10 ? 10 -> false
+    // 123 ? '123' -> false
+    // 123 ? '123' -> true
     console.log(5 < 6);
     console.log(5 === 6);
     console.log(5 > 6);
@@ -145,13 +126,13 @@
     console.log(123 === '123');
     console.log(123 == '123');
 
+    // - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
     let str = "20";
     let a = 5;
-    document.write(str + a + "<br/>");
-    document.write(str - a + "<br/>");
-    document.write(str * "2" + "<br/>");
-    document.write(str / 2 + "<br/>");
+    document.write(str + a + "<br/>"); // a == string -> str(string) + a(string) -> "20" + "5" = "205"
+    document.write(str - a + "<br/>"); // str == number -> 20 - 5 -> 15
+    document.write(str * "2" + "<br/>"); // str, "2" == number -> 20 * 2 -> 40
+    document.write(str / 2 + "<br/>"); // str == number -> 20 / 2 -> 10
 </script>
-
 </body>
 </html>

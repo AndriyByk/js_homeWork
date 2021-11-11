@@ -10,7 +10,7 @@
 <body>
 <script>
 
-    // 1.
+    // 1. Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.
     let a = Math.random();
     let b = Math.random();
     let c = Math.random();
@@ -27,14 +27,14 @@
         result += result[i];
     }
 
-    // 2.
+    // 2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
     let book = {
         name: "",
         numberOfPage: 100500,
         genre: "horror"
     }
 
-    // 3.
+    // 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
     let book1 = {
         name: "",
         numberOfPage: 100500,
@@ -42,7 +42,8 @@
         authors: ["kipling", "shewchenko", "bredberi"]
     }
 
-    // 4.
+    // 4. Створити маcив об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну
+    //    книгу як окремий об'єкт
     let book2 = [{
         name: "a", numberOfPage: 100, genre: "horror", authors: ["kipling", "shewchenko", "bredberi"]
     },
@@ -56,26 +57,28 @@
             name: "d", numberOfPage: 400, genre: "detective", authors: ["kipling", "shewchenko", "bredberi"]
         }
     ];
-
-    for (let i = 0; i < book.length; i++) {
-        console.log(book[0]);
+    for (let i = 0; i < book2.length; i++) {
+        console.log(book2[0]);
     }
 
-    // 5.
+    // 5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
+    //    Значення площі зберігати в змінній s.
     let width = 10;
     let height = 23;
     let s = width * height;
 
-    // 6.
+    // 6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),
+    //    результат помістіть у змінну v.
     let heightC = 10;
     let dC = 4;
-    let v = heightC * dC;
+    let rC = dC / 2;
+    let v = heightC * Math.pow(rC, 2) * Math.PI;
 
-    // 7.
+    // 7.У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
+    //   Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
     let m = 3;
     let n = 4;
     let k = Math.sqrt(Math.pow(m, 2) + Math.pow(n, 2));
-
 </script>
 </body>
 </html>
