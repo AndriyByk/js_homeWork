@@ -14,7 +14,12 @@
     //     Також потрібно врахувати коли введені рівні числа.
     let a = prompt();
     let b = prompt();
-    console.log(a > b ? a : a < b ? b : "числа рівні");
+    if (a > b)
+        console.log(a);
+    else if (b > a)
+        console.log(b);
+    else
+        console.log (a + " і " + b + " рівні");
 
     // - У першому під'їзді квартири з 1 до 20. У другому з 21 по 48. У третьому з 49 по 90.
     // Користувач вводить номер квартири просто в змінні або через prompt('') .
@@ -33,7 +38,7 @@
     // - Ми маємо змінну number в яку користувач задає числове значення,  якщо змінна рівна 10 вивести повідомлення ВІРНО, якщо змінна не рівна 10 - тоді НЕВІРНО
     let number = prompt("Введіть числове значення:");
     if (+number === 10) console.log("Правильно");
-    else console.log("Неправильно")
+    else console.log("Неправильно");
 
     // - Ми маємо змінну x в яку користувач задає  значення,  якщо в змінну записане число, вивести 1,
     // якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 3.
@@ -64,12 +69,23 @@
     //     числа нам дається приз. (Авто, Мото, Телефон, і т.д ) і якщо число не підходить тоді  вивести Повідомлення - що число не вірне ... .
     let n = prompt();
     switch (+n) {
-        case 1: console.log("car"); break;
-        case 2: console.log("motorbike"); break;
-        case 3: console.log("cellphone"); break;
-        case 4: console.log("iPad"); break;
-        case 5: console.log("..pen"); break;
-        default: console.log("Число неправильне");
+        case 1:
+            console.log("car");
+            break;
+        case 2:
+            console.log("motorbike");
+            break;
+        case 3:
+            console.log("cellphone");
+            break;
+        case 4:
+            console.log("iPad");
+            break;
+        case 5:
+            console.log("..pen");
+            break;
+        default:
+            console.log("Число неправильне");
     }
 </script>
 </body>
