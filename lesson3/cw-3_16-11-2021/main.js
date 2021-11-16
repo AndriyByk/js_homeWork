@@ -33,7 +33,7 @@ for (let k = 0; k < array.length; k++) {
 // 5. перебрати циклом while та вивести  числа тільки парні  значення
 let l = 0;
 while (l < array.length) {
-    if (l % 2 === 0) {
+    if (array[l] % 2 === 0) {
         console.log(array[l]);
     }
     l++;
@@ -41,14 +41,14 @@ while (l < array.length) {
 
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
 for (let m = 0; m < array.length; m++) {
-    if (m % 2 === 0) {
+    if (array[m] % 2 === 0) {
         console.log(array[m]);
     }
 }
 
 // 7. замінити кожне число кратне 3 на слово "okten"
 for (let n = 0; n < array.length; n++) {
-    if (n % 3 === 0) {
+    if (array[n] % 3 === 0) {
         array[n] = "okten";
     }
 }
@@ -59,8 +59,10 @@ for (let o = array.length-1; o >= 0; o--) {
 }
 
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+array = [2,17,13,6,22,31,45,66,100,-18];
 
 // 9.1.
+i = array.length-1;
 while (i >= 0) {
     console.log(array[i]);
     i--;
@@ -88,7 +90,7 @@ for (let k = array.length; k >= 0; k--) {
 
 // 9.5.
 while (l >= 0) {
-    if (l % 2 === 0) {
+    if (array[l] % 2 === 0) {
         console.log(array[l]);
     }
     l--;
@@ -96,14 +98,14 @@ while (l >= 0) {
 
 // 9.6.
 for (let m = array.length; m >= 0; m--) {
-    if (m % 2 === 0) {
+    if (array[m] % 2 === 0) {
         console.log(array[m]);
     }
 }
 
 // 9.7.
 for (let n = array.length; n >= 0; n--) {
-    if (n % 3 === 0) {
+    if (array[n] % 3 === 0) {
         array[n] = "okten";
     }
 }
