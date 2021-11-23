@@ -44,10 +44,9 @@ let a = [{name: 'Dima', age: 13}, {model: 'Camry'}];
 
 function f3(objects) {
     let array = [];
-    for (let i = 0; i < objects.length; i++) {
-        let arr = Object.keys(objects[i]);
-        for (let j = 0; j < arr.length; j++) {
-            array.push(arr[j]);
+    for (let object of objects) {
+        for (let objectKey in object) {
+            array.push(objectKey);
         }
     }
     return array;
@@ -60,11 +59,14 @@ console.log(f3(a));
 //         [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
 function f4(objects) {
     let array = [];
-    for (let i = 0; i < objects.length; i++) {
-        let arr = Object.values(objects[i]);
-        for (let j = 0; j < arr.length; j++) {
-            array.push(arr[j]);
+    for (let object of objects) {
+        for (let objectElement in object) {
+            array.push(object[objectElement]);
         }
+        // for (let objectKey in object) {
+        //     array.push(objectKey.valueOf())
+        //     // array.push(object.valueOf(objectKey));
+        // }
     }
     return array;
 }
