@@ -37,17 +37,17 @@ class Client {
         this.surname = surname;
         this.email = email;
         this.phone = phone;
-        // в полі this.order генерую масив з випадковою кількістю товарів - наприклад, в межах введеного order
-        this.products = function () {
+        this.order = orderFunc(order);// генерую масив з випадковою кількістю товарів - наприклад, в межах введеного order
+
+        function orderFunc(order) {
             let array = [];
             let quantityOfProductsTillOrder = Math.round(Math.random() * order);
             for (let i = 0; i < quantityOfProductsTillOrder; i++) {
                 array.push({nameOfProduct: "name " + i})
             }
             return array;
-        };
-        this.order = this.products();
-    };
+        }
+    }
 }
 
 //-------------------------------------------------------------------
