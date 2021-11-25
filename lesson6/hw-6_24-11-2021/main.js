@@ -3,7 +3,6 @@
 let str1 = 'hello world';
 let str2 = 'lorem ipsum';
 let str3 = 'javascript is cool';
-
 console.log(str1.length);
 console.log(str2.length);
 console.log(str3.length);
@@ -88,10 +87,6 @@ function capitalize(str) {
         let subString = array[i].substr(1);
         array[i] = bigCharacter.concat(subString);
     }
-    let string = "";
-    array.forEach(item => {
-        string = string.concat(item + " ");
-    });
-    return string.trim();
+    return array.join(" ");
 }
 console.log(capitalize("string lorem ipsum javascript is cool dirty string"));

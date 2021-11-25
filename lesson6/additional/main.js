@@ -216,8 +216,9 @@ function count(str, stringSearch) {
     }
     return quantity;
 }
-let symb = "о", str = "Астрономия это наука о небесных объектах";
-document.writeln(count(str, symb)) // 5
+let symb = "о";
+let str = "Астрономия это наука о небесных объектах";
+document.writeln(count(str, symb));// 5
 
 //------------------------------------------------------------------------------
 // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.

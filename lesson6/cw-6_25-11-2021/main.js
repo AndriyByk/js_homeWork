@@ -10,25 +10,21 @@
 let n1 = 'Harry..Potter';
 let n2 = 'Ron---Whisley';
 let n3 = 'Hermione__Granger';
-function normalizer(str) {
-    str = str.replaceAll("_", " ");
-    str = str.replaceAll(".", " ");
-    str = str.replaceAll("-", " ");
-    let array = str.split(" ");
-    for (let elem in array) {
-        elem = elem.trim();
-    }
-    let name = "";
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] !== "") {
-            name = name.concat(array[i] + " ");
+function normalizer(str, symb) {
+    if (str.includes(symb)) {
+        let array = str.split(symb);
+        let arrayClear = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].length !== 0) {
+                arrayClear.push(array[i]);
+            }
         }
+        return arrayClear.join(" ");
     }
-    return name.trim();
 }
-console.log(normalizer(n1));
-console.log(normalizer(n2));
-console.log(normalizer(n3));
+console.log(normalizer(n1,'.'));
+console.log(normalizer(n2, "-"));
+console.log(normalizer(n3, "_"));
 
 //-----------------------------------------------------------------------------
 //     - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
