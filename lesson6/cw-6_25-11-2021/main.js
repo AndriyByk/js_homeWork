@@ -31,10 +31,12 @@ console.log(normalizer(n3, "_"));
 function randomTenToHundred() {
     let arrayOfNumbers = [];
     for (let i = 0; i < 10; i++) {
-        arrayOfNumbers[i] = Math.round(Math.random() * 100);
+        arrayOfNumbers.push(Math.round(Math.random() * 100));
     }
     return arrayOfNumbers;
 }
+console.log(randomTenToHundred());
+
 //-----------------------------------------------------------------------------
 // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
 let arrayOfNumbers = randomTenToHundred();
@@ -54,9 +56,7 @@ console.log(array1);
 //-----------------------------------------------------------------------------
 // - створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
 let arrayOfNumbers2 = randomTenToHundred();
-let array2 = arrayOfNumbers2.map(value => {
-    return value + "";
-});
+let array2 = arrayOfNumbers2.map(value => value + "");
 console.log(array2);
 
 //-----------------------------------------------------------------------------
@@ -64,20 +64,20 @@ console.log(array2);
 //     let nums = [11,21,3];
 // sortNums('ascending') // [3,11,21]
 // sortNums('descending') // [21,11,3]
-function sortNums(direction) {
-    let nums = [11,21,3];
+function sortNums(array, direction) {
     if (direction === "ascending") {
-        return nums.sort(((a, b) => {
+        return array.sort(((a, b) => {
             return a - b;
         }));
     } else if (direction === "descending") {
-        return nums.sort(((a, b) => {
+        return array.sort(((a, b) => {
             return b - a;
         }));
     }
 }
-console.log(sortNums('ascending')); // [3,11,21]
-console.log(sortNums('descending')); // [21,11,3]
+let nums = [11,21,3];
+console.log(sortNums(nums,'ascending')); // [3,11,21]
+console.log(sortNums(nums,'descending')); // [21,11,3]
 
 //-----------------------------------------------------------------------------
 // - є масив
@@ -113,6 +113,8 @@ console.log(filteredArray);
 //-----------------------------------------------------------------------------
 // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
 // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+
+// standard
 function cutString(str, n) {
     let array = [];
     let length = str.length;
@@ -123,3 +125,24 @@ function cutString(str, n) {
     return array;
 }
 console.log(cutString('наслаждение',3)); // [нас,лаж,ден,ие]
+
+// with use of recursion
+function cutStringRecursion(str, n) {
+    let array = [];
+    let length = str.length;
+    let i = 0;
+    rec(str, n);
+
+    function rec (str, n) {
+        array.push(str.substr(0, n));
+        i++;
+        if (i < length / n) {
+            str = str.substr(n);
+            rec(str, n);
+        }
+        return array;
+    }
+
+    return array;
+}
+console.log(cutStringRecursion('наслаждение',3)); // [нас,лаж,ден,ие]
