@@ -10,36 +10,14 @@
 // Примітка
 // Для тих, хто дуже розумний, та почне використовувати регулярні вирази одразу "ні". Своїм мозком подумайте над
 // протоколом, з регулярками будете потім бавитись.
-
 function validator(string) {
-    // if (!string.includes("@"))
-    //     return false;
-    let existenceOfAt = false;
-    for (let i = 0; i < string.length; i++) {
-        if (string[i] === "@") {
-            existenceOfAt = true;
-            break;
-        }
-    }
-    if (existenceOfAt === false) {
+    if (!string.includes("@"))
         return false;
-    }
     let partsAroundAt = string.split("@");
-    if (partsAroundAt[0].length === 0 || partsAroundAt[1].length === 0) {
+    if (partsAroundAt[0].length === 0 || partsAroundAt[1].length === 0)
         return false;
-    }
-    // if (!partsAroundAt[1].includes("."))
-    //     return false;
-    let existenceOfDot = false;
-    for (let i = 0; i < partsAroundAt[1].length; i++) {
-        if (partsAroundAt[1][i] === ".") {
-            existenceOfDot = true;
-            break;
-        }
-    }
-    if (existenceOfDot === false) {
+    if (!partsAroundAt[1].includes("."))
         return false;
-    }
     let partsAroundDot = partsAroundAt[1].split(".");
     return !(partsAroundDot[0].length === 0 || partsAroundDot[1].length < 2);
 }
@@ -53,7 +31,6 @@ console.log(validator("someeMAIL@.com"));
 console.log(validator("someeMAIL@gmail.m"));
 console.log(validator("@gmail.com"));
 console.log(validator("someeMAIL@gmailcom"));
-
 
 //------------------------------------------------------------------------------
 // - є масив let coursesArray = [
@@ -127,7 +104,6 @@ console.log(validator("someeMAIL@gmailcom"));
 // ];
 //
 // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
-
 let coursesArray = [
     {
         title: 'JavaScript Complex',
