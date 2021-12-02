@@ -83,9 +83,9 @@ console.log(change("string string")); // 'HTML-JAVASCRIPT-PHP'
 function capitalize(str) {
     let array = str.split(" ");
     for (let i = 0; i < array.length; i++) {
-        let bigCharacter = array[i][0].toUpperCase();
-        let subString = array[i].substr(1);
-        array[i] = bigCharacter.concat(subString);
+        let firstCharacter = array[i][0].toUpperCase();
+        let restCharacters = array[i].substr(1);
+        array[i] = firstCharacter.concat(restCharacters);
     }
     return array.join(" ");
 }
