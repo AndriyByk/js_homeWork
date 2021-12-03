@@ -33,31 +33,23 @@ class Main {
         this.name = name;
         this.username = username;
         this.email = email;
-        this.address = address(street, suite, city, zipcode, lat, lng);
+        this.address = {
+            street: street,
+            suite: suite,
+            city: city,
+            zipcode: zipcode,
+            geo: {
+                lat: lat,
+                lng: lng
+            }
+        };
         this.phone = phone;
         this.website = website;
-        this.company = company(companyName, catchPhrase, bs);
-
-        function company(companyName, catchPhrase, bs) {
-            return {
-                name: companyName,
-                catchPhrase: catchPhrase,
-                bs: bs
-            };
-        }
-
-        function address(street, suite, city, zipcode, lat, lng) {
-            return {
-                street: street,
-                suite: suite,
-                city: city,
-                zipcode: zipcode,
-                geo: {
-                    lat: lat,
-                    lng: lng
-                }
-            };
-        }
+        this.company = {
+            name: companyName,
+            catchPhrase: catchPhrase,
+            bs: bs
+        };
     }
 }
 
@@ -79,7 +71,7 @@ let main = new Main(
     'harness real-time e-markets');
 console.log(main.address.geo.lng);
 console.log(main.company.catchPhrase);
-console.log(main.company);
+console.log(main.company.name);
 
 //-------------------------------------------------------------------
 // -  Створити функцію конструктор / клас  який описує об'єкт тегу
