@@ -12,23 +12,23 @@ function Car(model, producer, year, maxSpeed, capacity) {
     this.maxSpeed = maxSpeed;
     this.capacity = capacity;
 
-    this.drive = function drive() {
+    this.drive = function () {
         console.log(`їдемо зі швидкістю ${maxSpeed} на годину`);
     }
-    this.info = function info() {
+    this.info = function () {
         console.log("model - " + this.model);
         console.log("producer - " + this.producer);
         console.log("year - " + this.year);
         console.log("maxSpeed - " + this.maxSpeed);
         console.log("capacity - " + this.capacity);
     }
-    this.increaseMaxSpeed = function increaseMaxSpeed (newSpeed) {
+    this.increaseMaxSpeed = function (newSpeed) {
         this.maxSpeed = this.maxSpeed + newSpeed;
     }
-    this.changeYear = function changeYear (newValue) {
+    this.changeYear = function (newValue) {
         this.year = newValue;
     }
-    this.addDriver = function addDriver (driver) {
+    this.addDriver = function (driver) {
         this.driver = driver;
     }
 }
@@ -132,7 +132,4 @@ console.log(taSamaPopeljushka.name);
 
 //------------------------------------------------------------------------------------------------------------
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-let taSamaPopeljushka2 = popeljushkas.find(value => {
-    return value.sizeOfFoot === prynz.tufelka;
-});
-console.log(taSamaPopeljushka2.name);
+console.log(popeljushkas.find(popeljushka => popeljushka.sizeOfFoot === prynz.tufelka).name);
