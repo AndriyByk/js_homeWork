@@ -1,0 +1,48 @@
+.coursesArrayElement {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #69c1ff;
+    row-gap: 20px;
+    column-gap: 20px;
+    justify-content: space-evenly;
+}
+
+.title {
+    background-color: #5892ff;
+    width: 100%;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    justify-items: center ;
+    box-sizing: border-box;
+}
+
+.monthDuration,
+.hourDuration {
+    font-size: 25px;
+    flex-grow: 1;
+    text-align: center;
+    height: 30px;
+    background-color: #5892ff;
+}
+
+.modules {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    row-gap: 20px;
+    padding: 20px;
+    background-color: #5892ff;
+}
+
+.courseFieldComponent {
+    font-size: 25px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color: #69c1ff;
+    width: 100%;
+}
