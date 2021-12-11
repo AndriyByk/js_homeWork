@@ -1,0 +1,32 @@
+/*
+FOR TASK 4
+*/
+#menuElement,
+.zeroElementOfMenu{
+    width: 200px;
+}
+
+.elementOfMenu {
+    max-width : 200px;
+    border: black solid 1px;
+    display: none;
+}
+.shown {
+    display: block;
+}
+
+/*
+FOR TASK 5
+*/
+#commentElementBody1,
+#commentElementBody2,
+#commentElementBody3,
+#commentElementBody4,
+#commentElementBody0 {
+    height: fit-content;
+}
+
+.shorting {
+    max-height: 35px;
+    overflow-y: hidden;
+}
