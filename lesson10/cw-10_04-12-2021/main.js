@@ -43,30 +43,49 @@ button.onclick = function () {
 // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 //     (Додатковачастина для завдання)
+let form3 = document.createElement("form");
+form3.id = "form3";
+document.body.appendChild(form3);
 
-// let form3 = document.createElement("form");
-// form3.id = "form3";
-// document.body.appendChild(form3);
-//
-// let inputFirstOfForm3 = document.createElement("input");
-// inputFirstOfForm3.type = "text";
-// inputFirstOfForm3.name = "inputFirstOfForm3";
-// form1.appendChild(inputFirstOfForm3);
-//
-// let inputSecondOfForm3 = document.createElement("input");
-// inputSecondOfForm3.type = "text";
-// inputSecondOfForm3.name = "inputSecondOfForm3";
-// form1.appendChild(inputSecondOfForm3);
-//
-// let inputThirdOfForm3 = document.createElement("input");
-// inputThirdOfForm3.type = "text";
-// inputThirdOfForm3.name = "inputThirdOfForm3";
-// form1.appendChild(inputThirdOfForm3);
-//
-// let button1 = document.createElement("button");
-// button1.id = "button";
-// button1.innerText = "But;)";
-// document.body.appendChild(button1);
+let inputFirstOfForm3 = document.createElement("input");
+inputFirstOfForm3.type = "number";
+inputFirstOfForm3.name = "inputFirstOfForm3";
+form3.appendChild(inputFirstOfForm3);
+
+let inputSecondOfForm3 = document.createElement("input");
+inputSecondOfForm3.type = "number";
+inputSecondOfForm3.name = "inputSecondOfForm3";
+form3.appendChild(inputSecondOfForm3);
+
+let inputThirdOfForm3 = document.createElement("input");
+inputThirdOfForm3.type = "text";
+inputThirdOfForm3.name = "inputThirdOfForm3";
+form3.appendChild(inputThirdOfForm3);
+
+let button1 = document.createElement("button");
+button1.id = "button";
+button1.innerText = "Butiq";
+document.body.appendChild(button1);
+
+button1.onclick = function () {
+    let numberOfRows = document.forms.form3.inputFirstOfForm3.value;
+    let numberOfColumn = document.forms.form3.inputSecondOfForm3.value;
+    let content = document.forms.form3.inputThirdOfForm3.value;
+    let table = document.createElement("table");
+    document.body.appendChild(table);
+    let tbody = document.createElement("tbody");
+    document.body.appendChild(tbody);
+    for (let i = 0; i < numberOfRows; i++) {
+        let tr = document.createElement("tr");
+        tbody.appendChild(tr);
+        for (let j = 0; j < numberOfColumn; j++) {
+            let td = document.createElement("td");
+            td.classList.add("vlada");
+            td.innerText = content;
+            tbody.appendChild(td);
+        }
+    }
+}
 
 //----------------------------------------------------------
 //     Task 1
