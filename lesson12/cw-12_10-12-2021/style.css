@@ -1,0 +1,57 @@
+body {
+    row-gap: 10px;
+}
+
+/* Posts */
+.bodyOfPosts {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1%;
+    row-gap: 10px;
+    flex-direction: column;
+}
+
+.postButton {
+    width: 10%;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-field {
+    display: flex;
+    border: black solid 1px;
+    background-color: #69c1ff;
+    column-gap: 2px;
+}
+
+.post-field-name {
+    background-color: #5892ff;
+    min-width: 40px;
+}
+
+/* Comments */
+
+.hidden {
+    display: none;
+}
+
+.comment {
+    margin-left: 20px;
+    margin-top: 15px;
+    width: fit-content;
+}
+
+.comment-field {
+    display: flex;
+    border: black solid 1px;
+    background-color: #ffbbbb;
+    column-gap: 2px;
+}
+
+.comment-field-name {
+    background-color: #ff5858;
+    min-width: 40px;
+}

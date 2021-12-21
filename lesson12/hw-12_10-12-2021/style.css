@@ -1,0 +1,49 @@
+/*Task 1*/
+body {
+    row-gap: 10px;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 1%;
+    row-gap: 10px;
+}
+
+.post {
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-field {
+    display: flex;
+    border: black solid 1px;
+    background-color: #69c1ff;
+    column-gap: 2px;
+}
+
+.post-field-name {
+    background-color: #5892ff;
+    min-width: 40px;
+}
+
+/*Task 2*/
+.comment {
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-field {
+    display: flex;
+    border: black solid 1px;
+    background-color: #69c1ff;
+    column-gap: 2px;
+}
+
+.comment-field-name {
+    background-color: #5892ff;
+    min-width: 40px;
+}
