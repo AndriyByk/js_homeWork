@@ -36,6 +36,11 @@ for (let i = 0; i < users.length; i++) {
     button.id = `button${i}`;
     button.innerText = "додати до улюблених";
     document.body.appendChild(button);
+    let message = document.createElement("span");
+    message.innerText = "user was added..";
+    message.id = `message${i}`;
+    message.classList.add("message-hidden");
+    document.body.appendChild(message);
 }
 
 for (let i = 0; i < users.length; i++) {
@@ -53,11 +58,14 @@ for (let i = 0; i < users.length; i++) {
         for (let j = 0; j < arrayFromStorage.length; j++) {
             if (arrayFromStorage[j].name === user.name && arrayFromStorage[j].age === user.age &&
                 arrayFromStorage[j].status === user.status) {
+                window.alert("that user was already added earlier");
                 return;
             }
         }
         arrayFromStorage.push(user);
         localStorage.setItem("favorites", JSON.stringify(arrayFromStorage));
+        let but =  document.getElementById(`message${i}`);
+        but.classList.toggle("message-hidden");
     }
 }
 
