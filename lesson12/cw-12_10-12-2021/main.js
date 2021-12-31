@@ -13,8 +13,9 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
             //   build structure of posts
             let divPost = document.createElement("div");
-            divPost.classList.add("post");                                                    body.appendChild(divPost);
-                                                                                              for (let elementKey in post) {
+            divPost.classList.add("post");
+            body.appendChild(divPost);
+            for (let elementKey in post) {
 
                 let newPath = document.createElement("div");
                 newPath.classList.add("post-field");
@@ -28,7 +29,10 @@ fetch("https://jsonplaceholder.typicode.com/posts")
                 newPath.appendChild(postFieldName);
 
                 let postFieldDescription = document.createElement("div");
-                postFieldDescription.innerText = elemValue;                                       postFieldDescription.classList.add("post-field-description");                     newPath.appendChild(postFieldDescription);                                    }
+                postFieldDescription.innerText = elemValue;
+                postFieldDescription.classList.add("post-field-description");
+                newPath.appendChild(postFieldDescription);
+            }
 
             //   add button
             let postButton = document.createElement("button");
